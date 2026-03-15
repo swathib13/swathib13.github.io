@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+:root {
+  /* Deep navy/slate base - inspired by sbarhanpure but warmer */
+  --ink: #0a1628;
+  --navy: #0f2137;
+  --navy-soft: #162d4a;
+  --slate: #1e3a5f;
+
+  /* Warm copper/amber accent - distinctive from Sandeep's gold */
+  --copper: #d4956a;
+  --copper-bright: #e8b08a;
+  --copper-dim: #b87a52;
+
+  /* Mineral/steel tones */
+  --mineral: #7a9bb5;
+  --mineral-dim: #5a7d96;
+
+  /* Text tones */
+  --white: #f5f7fa;
+  --white-muted: #f5f7fab3;
+  --white-dim: #f5f7fa80;
+  --white-faint: #f5f7fa40;
+
+  /* Utility */
+  --line: #f5f7fa15;
+  --line-strong: #f5f7fa25;
+  --paper: #f0ede6;
+  --paper-deep: #e2ddd2;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-navy: var(--navy);
+  --color-navy-soft: var(--navy-soft);
+  --color-slate: var(--slate);
+  --color-copper: var(--copper);
+  --color-copper-bright: var(--copper-bright);
+  --color-copper-dim: var(--copper-dim);
+  --color-mineral: var(--mineral);
+  --color-mineral-dim: var(--mineral-dim);
+  --color-white: var(--white);
+  --color-white-muted: var(--white-muted);
+  --color-white-dim: var(--white-dim);
+  --color-white-faint: var(--white-faint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-paper: var(--paper);
+  --color-paper-deep: var(--paper-deep);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-playfair);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ink);
+  color: var(--white);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--copper);
+  color: var(--ink);
+}
+
+/* Subtle noise texture overlay */
+.noise-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, var(--copper), var(--copper-bright));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card styling */
+.card-glass {
+  background: linear-gradient(145deg, #ffffff0a, #ffffff04);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.card-glass:hover {
+  border-color: var(--line-strong);
+  background: linear-gradient(145deg, #ffffff0f, #ffffff06);
+}
+
+/* Smooth reveal animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Section divider */
+.section-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line-strong), transparent);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ink);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--navy-soft);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--slate);
+}
