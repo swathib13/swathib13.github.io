@@ -1,32 +1,32 @@
 @import "tailwindcss";
 
 :root {
-  /* Deep navy/slate base - inspired by sbarhanpure but warmer */
-  --ink: #0a1628;
-  --navy: #0f2137;
-  --navy-soft: #162d4a;
-  --slate: #1e3a5f;
+  /* Deep charcoal/slate base */
+  --ink: #0c0f17;
+  --navy: #121825;
+  --navy-soft: #1a2236;
+  --slate: #252e42;
 
-  /* Warm copper/amber accent - distinctive from Sandeep's gold */
-  --copper: #d4956a;
-  --copper-bright: #e8b08a;
-  --copper-dim: #b87a52;
+  /* Teal/emerald accent - professional, distinct from Sandeep's gold */
+  --copper: #3ecfa5;
+  --copper-bright: #5eddb8;
+  --copper-dim: #2ba882;
 
-  /* Mineral/steel tones */
-  --mineral: #7a9bb5;
-  --mineral-dim: #5a7d96;
+  /* Cool silver tones */
+  --mineral: #8b9db5;
+  --mineral-dim: #6b7f9a;
 
   /* Text tones */
-  --white: #f5f7fa;
-  --white-muted: #f5f7fab3;
-  --white-dim: #f5f7fa80;
-  --white-faint: #f5f7fa40;
+  --white: #edf0f7;
+  --white-muted: #edf0f7b3;
+  --white-dim: #edf0f780;
+  --white-faint: #edf0f740;
 
   /* Utility */
-  --line: #f5f7fa15;
-  --line-strong: #f5f7fa25;
-  --paper: #f0ede6;
-  --paper-deep: #e2ddd2;
+  --line: #edf0f712;
+  --line-strong: #edf0f722;
+  --paper: #f0f2f5;
+  --paper-deep: #e3e6ec;
 }
 
 @theme inline {

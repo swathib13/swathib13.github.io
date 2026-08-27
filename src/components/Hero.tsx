@@ -32,7 +32,7 @@ export default function Hero() {
     >
       {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_14%_18%,#274f737a,transparent_29%),linear-gradient(120deg,var(--ink),var(--navy)_68%,#102841)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_14%_18%,#1a2236aa,transparent_35%),linear-gradient(120deg,var(--ink),var(--navy)_68%,#151c2e)]" />
       </div>
 
       {/* Portrait image - positioned absolutely on the right like Sandeep */}

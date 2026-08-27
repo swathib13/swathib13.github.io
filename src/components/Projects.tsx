@@ -42,7 +42,7 @@ export default function Projects() {
             <span className="px-3 py-1 text-[11px] font-medium tracking-wide uppercase bg-copper text-white rounded-full">
               Featured
             </span>
-            <span className="px-3 py-1 text-[11px] font-medium tracking-wide uppercase bg-paper-deep text-ink/60 rounded-full">
+            <span className="px-3 py-1 text-[11px] font-medium tracking-wide uppercase bg-paper-deep text-ink/70 rounded-full">
               Enterprise Migration
             </span>
             <span className="px-3 py-1 text-[11px] font-medium tracking-wide uppercase bg-green-50 text-green-800 rounded-full border border-green-200/60">

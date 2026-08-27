@@ -9,7 +9,7 @@ export default function About() {
 
   return (
     <section id="about" className="relative py-28" ref={ref}>
-      <div className="absolute inset-0 bg-[linear-gradient(120deg,var(--ink),var(--navy)_68%,#102841)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(120deg,var(--ink),var(--navy)_68%,#151c2e)]" />
 
       <div className="relative max-w-[1200px] mx-auto px-8">
         <motion.div
